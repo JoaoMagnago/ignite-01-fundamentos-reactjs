@@ -1,7 +1,7 @@
-import { Post } from "./Post"
-import { Header } from "./components/Header"
+import { Header } from "./components/Header";
+import { Post } from "./Post";
 
-import './styles.css'
+import "./global.css";
 
 export function App() {
   return (
@@ -13,10 +13,7 @@ export function App() {
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium illum delectus beatae, nihil maxime iure tempore velit mollitia facilis quos, libero ex reiciendis. Reprehenderit nihil iste laborum amet delectus!"
       />
 
-      <Post
-        author="Gabriel Pires"
-        content="Um novo post muito legal"
-      />
+      <Post author="Gabriel Pires" content="Um novo post muito legal" />
     </div>
-  )
+  );
 }
