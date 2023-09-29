@@ -53,13 +53,6 @@ export function App() {
               publishedAt={post.publishedAt}
             />
           ))}
-
-          <Post
-            author="João Magnago"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium illum delectus beatae, nihil maxime iure tempore velit mollitia facilis quos, libero ex reiciendis. Reprehenderit nihil iste laborum amet delectus!"
-          />
-
-          <Post author="Gabriel Pires" content="Um novo post muito legal" />
         </main>
       </div>
     </div>
