@@ -26,6 +26,10 @@ export function Post({ author, publishedAt, content }) {
     setNewCommentText(event.target.value)
   }
 
+  function deleteComment(comment) {
+    console.log('Deletar comentário ', comment)
+  }
+
   return (
     <article className={styles.post}>
       <header>
@@ -41,11 +45,11 @@ export function Post({ author, publishedAt, content }) {
       </header>
 
       <div className={styles.content}>
-        {content.map((line, index) => {
+        {content.map(line => {
           // Minha alternativa
           return {
-            paragraph: <p key={index}>{line.content}</p>,
-            link: <p key={index}><a href="">{line.content}</a></p>
+            paragraph: <p key={line.content}>{line.content}</p>,
+            link: <p key={line.content}><a href="">{line.content}</a></p>
           }[line.type]
           // Código original da aula:
           // if (line.type === 'paragraph') {
@@ -72,8 +76,14 @@ export function Post({ author, publishedAt, content }) {
       </form>
 
       <div className={styles.commentList}>
-        {comments.map((comment, index) => {
-          return <Comment key={index} content={comment} />
+        {comments.map(comment => {
+          return (
+            <Comment
+              key={comment}
+              content={comment}
+              onDeleteComment={deleteComment}
+            />
+          )
         })}
       </div>
     </article>
